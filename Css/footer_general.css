@@ -1,0 +1,181 @@
+
+/*--------------------------FOOTER--------------------------*/
+footer {
+    width: 100%;
+    height: 400px;
+    position: relative;    
+}
+footer .footer_inicial {
+    width: 100%;
+    height: 320px;
+    background:url(../Imagenes/Banner/Slider_2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    /*REGLAS FLEXBOX*/
+    display: flex;
+    
+}
+footer .footer_inicial:before {
+    content: "";
+    width: 100%;
+    height: 320px;
+    background: #000;
+    position: absolute;
+    opacity: .8;
+}
+footer .footer_inicial .contenedor_footer {
+    position: relative;
+    width: 90%;
+/*    height: 320px;*/
+    max-width: 1000px;
+    margin: auto;
+    /*REGLA FLEXBOX*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer_inicial .contenedor_footer h2{
+    font-size: 2em;
+}
+footer .footer_inicial .contenedor_footer h2,.p { 
+    color: #fff;
+    text-align:center;
+    margin: 10px 0px;
+}
+footer .footer_inicial .contenedor_footer .form input[type=submit] {
+    border: none;
+    width: 180px;
+    height: 30px;
+    background: #0099EB;
+    color: #fff;
+    font-weight:bold;
+}
+footer .footer_inicial .contenedor_footer .form {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+footer .footer_inicial .contenedor_footer .form input[type=email] {
+    border: 0;
+    width: 350px;
+    height: 30px;
+    margin: 0px 25px;
+    padding: 5px;
+    text-align: center;
+}
+
+footer .footer_final {
+    width: 100%;
+    height: 80px;
+    background: #0099EB;
+}
+footer .footer_final .contenedor_footer {
+    width: 90%;
+/*    height: 100%;*/
+    height: 80px;
+    max-width: 1000px;
+    margin: auto;
+    /*REGLAS FLEXBOX*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer_final .contenedor_footer .redes_sociales,.logo_footer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer_final .contenedor_footer .redes_sociales a span {
+/*     background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5px;    
+    font-size: 20px; */
+    font-size: 30px;
+    margin: 5px;
+    color:  #fff;
+}
+footer .footer_final .contenedor_footer .redes_sociales a:nth-child(1):hover span {
+    color: #0000ff;
+}
+footer .footer_final .contenedor_footer .redes_sociales a:nth-child(2):hover span {
+    color: #00FFE8;
+}
+footer .footer_final .contenedor_footer .redes_sociales a:nth-child(3):hover span {
+    color: #ff0000;
+}
+footer .footer_final .contenedor_footer .redes_sociales a:nth-child(4):hover span {
+    color: #ff0000;
+}
+footer .footer_final .contenedor_footer .logo_footer {
+    color: #fff;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+/*ADAPTAR*/
+@media (max-width: 700px) {
+    /*---FOOTER---*/
+    footer .footer_inicial .contenedor_footer .form {
+        margin-top: 30px;
+        /*REGLA FLEXBOX*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .footer_inicial .contenedor_footer .form input[type=submit] {
+        width: 350px;
+        margin-top: 10px;
+    }
+    
+}
+@media (max-width: 550px){
+    footer .footer_inicial .contenedor_footer {
+        width: 97%;
+    }
+    footer .footer_inicial:before {
+        height: 100%;
+    }
+    footer .footer_inicial {
+        height: 100%;
+    }
+    footer .footer_final {
+        height: 100px;
+    }
+    footer .footer_final .contenedor_footer {
+        flex-direction: column;
+    }
+    footer .footer_final .contenedor_footer .redes_sociales,.logo_footer {
+        width: 100%;
+    }
+}
+@media (max-width:400px) {
+    /*---FOOTER---*/
+    footer .footer_inicial .contenedor_footer h2{
+        font-size: 1.5em;
+    }
+    footer .footer_inicial .contenedor_footer .p { 
+        color: #fff;
+        text-align:center;
+        margin: 10px 0px;
+        font-size: 15px;
+    }
+    footer .footer_inicial .contenedor_footer .form input[type=submit]{
+        width: 100%;
+    }
+    footer .footer_inicial .contenedor_footer .form input[type=email] {
+        width: 100%;
+    }
+    footer .footer_final .contenedor_footer .redes_sociales a span {
+        font-size: 20px;
+    }
+    footer .footer_final .contenedor_footer .logo_footer {
+        font-size: 20px;
+    }
+    footer .footer_final .contenedor_footer {
+        justify-content: center;
+    }
+}

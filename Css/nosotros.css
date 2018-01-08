@@ -1,0 +1,259 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url(../Imagenes/Cuerpo/nosotros.jpg)no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*------------------------CUERPO DE PÀGINA------------------------*/
+
+/*------------MARCO PRINCIPAL------------*/
+body {
+    height: 500px;
+}
+main {
+    width: 100%;
+    position: relative;
+    top:-160px;
+}
+.marco {
+    width: 100%;
+    display: flex;
+    align-items:flex-end;
+    position: relative;
+}
+.marco_1 {
+    width: 40%;
+    height: 0px;
+    border-left: 0px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 95px solid #7B072E;
+    z-index: 20;
+}
+.marco_1 h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    font-size: 2.1em;
+    color: #fff;
+}
+.marco_2 {
+    width: 60%;
+    height: 0px;
+    border-left: 0px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 65px solid #FFCC01;
+    position: absolute;
+    left: 35%;
+    z-index: 19;
+}
+.marco_2 .iconos {
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+.iconos span {
+    font-size: 20px;
+    color: #fff;
+}
+.iconos span:nth-child(1) {
+    margin-left: 90px;
+}
+.iconos p {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/*------------PRESENTACIÓN------------*/
+
+.contenido {
+    width: 100%;
+    background: #fff;
+}
+.contenido .contenedor_contenido {
+    width: 90%;
+    height: 400px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+/*    justify-content: space-between;*/
+    align-items:center;
+}
+.imagen_principal {
+    width: 50%;
+    height: 300px;
+    background: url(../Imagenes/Cuerpo/veterinario.jpg)no-repeat 50% 50%;
+    background-size: cover;
+}
+.contenido_principal {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido_principal h3 {
+    color: #ff0000;
+}
+.contenido_principal p {
+    text-align: justify;
+}
+/*------------TÌTULO------------*/
+.titulo {
+    width: 100%;
+    height: 200px;
+}
+.titulo_equipo {
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    margin: auto;
+    /*REGLAS FLEXBOX*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cont_titulo {
+    color: #FFBD33;
+}
+.titulo_equipo h2 {
+    text-align: center;
+}
+.caracteristica .contenedor_caracteristica p {
+    color: #000;
+}
+.cont_titulo span:nth-child(even){
+    font-size: 25px;
+}
+.titulo_equipo .icon-down-hand {
+    color: #FFBD33;
+    font-size: 60px;
+}
+
+/*------------PRESENTACIÓN------------*/
+.equipo {
+    width: 100%;
+    height: 100%;
+    background: #E2E2E2;
+}
+.contenedor_equipo {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+/*    background: green;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contenedor_imagen {
+    width: 50%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.contenedor_imagen img {
+    width: 400px;
+    border-radius: 50%;
+}
+.contenedor_imagen h3 {
+    margin-top: 10px;
+}
+/*BOTON DE SUBIDA*/
+.ir-arriba {
+    display: none;
+    padding: 20px;
+    background: rgba(0, 153, 235,.5);
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 1s;
+}
+.ir-arriba:hover {
+    background: rgba(0, 153, 235,1);
+}
+/*ADAPTAR*/
+
+@media (max-width: 1000px) {
+/*PRESENTACIÓN*/
+    .contenedor_imagen img {
+        width: 300px;
+    }
+}
+@media (max-width: 880px) {
+/*MARCO PRINCIPAL*/ 
+    
+    .marco {
+        flex-direction: column;
+    }
+    .marco_1 {
+        width: 100%;
+        border-right: 0px solid transparent;
+        border-bottom: 95px solid rgba(123, 7, 46,.8);
+    }
+    .marco_1 h2 {
+        justify-content: flex-start;
+        margin-left: 15px;
+}
+    .marco_2 {
+        left: 0;
+        width: 100%;
+        border-right: 0px solid transparent;
+        position: static;
+    }   
+    .iconos span:nth-child(1) {
+        margin-left: 10px;
+    }
+/*IR ARRIBA*/
+    .ir-arriba {
+    padding: 10px;
+    font-size: 20px;    
+    }
+    }
+@media (max-width: 850px) {
+/*PRESENTACIÓN*/
+    .contenido {
+        height: 100%;
+}
+    .contenido .contenedor_contenido {
+        height: 100%;
+        padding: 10px 0px;
+        width: 95%;
+        flex-direction: column;
+    }
+    .imagen_principal {
+        width: 100%;
+        height: 400px;
+    }
+    .contenido_principal {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .contenido_principal h2 {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .contenido_principal h3 {
+        text-align: center;
+    }
+/*PRESENTACIÓN*/
+    .contenedor_imagen {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+/*PRESENTACIÓN*/
+    .contenedor_imagen img {
+        width: 200px;
+    }
+}

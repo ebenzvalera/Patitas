@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:'NewsCycle-Regular',cursive;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family:ArchitectsDaughter,cursive;
+}
+header {
+    position: fixed;
+    width: 100%;   
+    height: 60px;
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: all .5s;
+}
+/*BOTON DE IR ARRIBA*/
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    /*REGLA FLEXBOX*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor .logo {
+    height: 60px;
+    /*REGLA FLEXBOX*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor .logo span{
+    font-size: 30px;
+}
+.contenedor .logo p {
+    display: inline-block;
+    font-family: cursive;
+    text-align: center;
+    font-size: 30px;
+    padding:0px;
+}
+/*CHECKBOX*/
+#btn-menu {
+    display: none; 
+}
+/*ICONO DE HAMBURGUESA*/
+header label {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+header .blanco {
+    width: 42px;
+    height: 50px;
+    display: none;
+}
+/*MENU*/
+.menu ul {
+/*    background: #ce852a;*/
+    display: flex;
+    list-style: none;
+}
+.menu ul ul {
+    display: none;
+}
+.menu a {
+    display: block;
+    padding: 17px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover {
+    background: rgba(0,0,0,0.3);
+}
+.menu a span {
+    margin-left: 6px;
+}
+.menu ul li:hover ul {
+    background: rgba(0,0,0,.8);
+    display: block;
+    position: absolute;
+}
+.menu ul li ul li:hover a {
+    color: #ffff00;
+}
+
+@media (max-width:880px) {
+    .contenedor {
+        width: 97%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contenedor .logo span {
+        font-size: 30px;
+    }
+    .contenedor .logo p {
+        font-family: cursive;
+        text-align: center;
+        font-size: 30px;
+        padding: 0px;
+    }
+    header .blanco {
+        display: block;
+    }
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: all 0.3s;
+    }
+    .menu ul {
+        flex-direction: column;
+        background: rgba(0,0,0,.8);
+    }
+    .menu ul li:hover ul {
+        display: none;
+        position: static;
+    }
+    .menu span {
+        position: absolute;
+        right: 16px;
+    }
+    #btn-menu:checked ~ .menu {
+        transform: translateX(0%);
+    }
+    .menu ul ul {
+        background: rgba(0,0,0,0.4);
+    }
+    .menu ul ul a {
+        padding: 15px 40px;
+    }
+}

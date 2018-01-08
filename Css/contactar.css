@@ -1,0 +1,206 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url(../Imagenes/Cuerpo/contactar.jpg)no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*------------------------CUERPO DE PÀGINA------------------------*/
+
+/*------------MARCO PRINCIPAL------------*/
+body {
+    height: 0;
+}
+main {
+    width: 100%;
+    position: relative;
+    top:-160px;
+}
+.marco {
+    width: 100%;
+    display: flex;
+    align-items:flex-end;
+    position: relative;
+}
+.marco_1 {
+    width: 40%;
+    height: 0px;
+    border-left: 0px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 95px solid #7B072E;
+    z-index: 20;
+}
+.marco_1 h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    font-size: 2.1em;
+    color: #fff;
+}
+.marco_2 {
+    width: 60%;
+    height: 0px;
+    border-left: 0px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 65px solid #FFCC01;
+    position: absolute;
+    left: 35%;
+    z-index: 19;
+}
+.marco_2 .iconos {
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+.iconos span {
+    font-size: 20px;
+    color: #fff;
+}
+.iconos span:nth-child(1) {
+    margin-left: 90px;
+}
+.iconos p {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/*------------CONTACTAR------------*/
+.contactar {
+    width: 100%;
+    height: 800px;
+}
+.contactar_gen {
+    width: 100%;
+    background: #fff;
+    height: 200px;
+    display: flex;
+}
+.img_content {
+    width: 30%;
+    height: 0px;
+}
+.iconos_g {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uno {
+    border-left: 130px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 200px solid #FFCC01;
+}
+.dos {
+    border-left: 0px solid transparent;
+    border-right: 130px solid transparent;
+    border-bottom: 200px solid #319BC3;
+}
+.tres {
+    border-left: 130px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 200px solid #6BAC50;
+}
+.cuatro {
+    border-left: 0px solid transparent;
+    border-right: 130px solid transparent;
+    border-bottom: 200px solid #394F64;
+}
+.iconos_g span{
+    font-size: 3em;
+    color: #fff;
+}
+.contactar_descripcion {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactar_descripcion p {
+    color: #959FA8;
+}
+
+/*------------CONTACTAR------------*/
+
+.mapa {
+    width: 100%;
+    height: 400px;
+}
+iframe {
+    width: 100%;
+}
+
+/*BOTON DE SUBIDA*/
+.ir-arriba {
+    display: none;
+    padding: 20px;
+    background: rgba(0, 153, 235,.5);
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 1s;
+}
+.ir-arriba:hover {
+    background: rgba(0, 153, 235,1);
+}
+/*ADAPTAR*/
+
+@media (max-width: 1000px) {
+
+}
+@media (max-width: 880px) {
+/*MARCO PRINCIPAL*/ 
+    
+    .marco {
+        flex-direction: column;
+    }
+    .marco_1 {
+        width: 100%;
+        border-right: 0px solid transparent;
+        border-bottom: 95px solid rgba(123, 7, 46,.8);
+    }
+    .marco_1 h2 {
+        justify-content: flex-start;
+        margin-left: 15px;
+}
+    .marco_2 {
+        left: 0;
+        width: 100%;
+        border-right: 0px solid transparent;
+        position: static;
+    }   
+    .iconos span:nth-child(1) {
+        margin-left: 10px;
+    }
+/*IR ARRIBA*/
+    .ir-arriba {
+    padding: 10px;
+    font-size: 20px;    
+    }
+    }
+@media (max-width: 700px) {
+/*CONTACTAR*/
+    .contactar {
+        height: 100%;
+    }
+    .img_content {
+        width: 100%;
+    }
+    .contactar_descripcion {
+        width: 100%;
+    }
+    .contactar_gen {
+        flex-direction: column;  
+        height: 400px;
+    }
+}
+@media (max-width: 400px) {
+
+}
